@@ -2,20 +2,27 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Quiz Time</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz Time</title>
 </head>
+
 <body>
-    <header class="header">
-        <h1>View High Score</h1>
-        <h2 class="time" style="..."">Timer</h2>
+    <header>
+        <h1 class="header">Welcome to the Quiz!</h1>
+        <h2 class="time" style="text-align:right; color:black;"></h2>
+        <div id="main"></div>
     </header>
-    <h1 class="quiz">
-        <p>Coding Quiz Challenge</p>
-    </h1>
-    <script src="./script.js"></script>
+    <div id="startpage">
+        <h1 class="quiz">
+            Coding Quiz Challenge
+        </h1>
+        <button id="start">Start</button>
+        <div id="questions"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,13 +1,18 @@
 var timeEl = document.querySelector(".time");
+var mainEl = document.getElementById("main");
+var startBtn = document.getElementById("start");
+var startPage = document.getElementById("startpage");
+
 
 var secondsLeft = 60;
-
+console.log("connected")
 function setTime() {
-    var timerInterval = setInterval(function() {
-        secondsLeft--;
-        timerInterval.textContent = secondsLeft + " seconds left";
 
-        if(secondsLeft === 0) {
+    var timerInterval = setInterval(function () {
+        secondsLeft--;
+        timeEl.textContent = secondsLeft + " seconds left";
+
+        if (secondsLeft === 0) {
             clearInterval(timerInterval);
             sendMessage();
         }
@@ -17,8 +22,16 @@ function setTime() {
 function sendMessage() {
     timeEl.textContent = " ";
     var imgEl = document.createElement("img");
-    imgEl.setAttribute("src", "https://assets.reedpopcdn.com/five-of-the-best-game-over-screens-1590748640300.jpg/BROK/thumbnail/1600x900/quality/100/five-of-the-best-game-over-screens-1590748640300.jpg");
+    imgEl.setAttribute("src", "images.game_over.jpeg");
     mainEl.appendChild(imgEl);
-  
-  }
-  setTime();
+
+}
+
+function hideElement() {
+    startPage.classList.add("hide")
+    setTime();
+
+
+}
+startBtn.addEventListener("click", hideElement);
+
